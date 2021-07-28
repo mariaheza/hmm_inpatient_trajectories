@@ -262,47 +262,6 @@ auc_results.to_csv(os.path.join(test_path,'TEST_auc_results.csv'))
 # To save performance (precision, recall, f1)
 performance.to_csv(os.path.join(test_path,'TEST_precision_recall_f1.csv'))
 
-## PLOTS:
-pyplot.clf()
-# To plot ROC curve:
-with open(results_root+'TEST_roc_parameters/'+'ROC_fpr.npy', 'rb') as f1:
-      fprT = np.load(f1)
-
-with open(results_root+'TEST_roc_parameters/'+'ROC_tpr.npy', 'rb') as f2:
-      tprT = np.load(f2)
-
-# pyplot.plot(fpr, tpr, marker='.', lw=2, label='LR AUC = '+str(round(roc_auc,2)))
-pyplot.plot(fprT, tprT, marker='.', lw=2, label='LR')
-pyplot.plot([0, 1], [0, 1], color='red', lw=2, linestyle='--') # Reference line
-pyplot.xlim([0.0, 1.0]) 
-pyplot.ylim([0.0, 1.05])
-pyplot.xlabel('False Positive Rate')
-pyplot.ylabel('True Positive Rate')
-pyplot.title('Receiver Operating Characteristic')
-pyplot.legend(loc="lower right")
-# To save the plot
-pyplot.savefig(results_root+'TEST_plots/'+'TEST_roc_auc_plot.pdf')  # To write the correct path and name for the plot
-pyplot.clf() # clears the entire current figure
-
-
-# To plot Precision-Recall curve:
-with open(results_root+'TEST_prc_parameters/'+'PRC_recall.npy', 'rb') as f4:
-      recallT = np.load(f4)
-
-with open(results_root+'TEST_prc_parameters/'+'PRC_precision.npy', 'rb') as f5:
-      precisionT = np.load(f5)
-
-pyplot.plot(recallT, precisionT, marker='.', lw=2, label='LR')
-no_skill = len(Tt_outcome[Tt_outcome==1]) / len(Tt_outcome)
-pyplot.plot([0, 1], [no_skill, no_skill], linestyle='--', label='No Skill')
-
-pyplot.xlabel('Recall')
-pyplot.ylabel('Precision')
-pyplot.title('Precision-Recall Curve')
-pyplot.legend(loc="upper right")
-# To save the plot
-pyplot.savefig(results_root+'TEST_plots/'+'TEST_prc_auc_plot.pdf')  # To write the correct path and name for the plot
-pyplot.clf() # clears the entire current figure
 
 print('All done for 4. MODEL TRAINING AND PREDICTION')
 print('END OF SCRIPT')
