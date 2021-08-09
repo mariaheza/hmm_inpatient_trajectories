@@ -1,6 +1,6 @@
 # Clinically interpretable representation of inpatient trajectories with Hidden Markov Models
 
-This repository stores the code used to process, impute, ...
+This repository stores the code used to process, imput and implement prediction models for Electronic Health Records data.
 
 # Citation
 Herrero-Zazo, Maria; Fitzgerald, Tomas; Taylor,Vince; Street, Helen; Chaudhry, Afzal N; Bradley, John; Birney, Ewan;Keevil, Victoria L. *Big Data Analysis of Electronic Health Records: Clinically interpretable representations of older adult inpatient trajectories using time-series numerical data and Hidden Markov Models*. medRxiv 2021.06.18.21258885; doi: https://doi.org/10.1101/2021.06.18.21258885
