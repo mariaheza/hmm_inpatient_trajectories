@@ -19,8 +19,8 @@ The anonymised data that support this research project are available from Cambri
 # Contact information
 Enquires about the code and methods:
 
-* Maria Herrero-Zazo (maria@ebi.ac.uk)
+* Maria Herrero-Zazo (maria@ebi.ac.uk); Tomas Fitzgerald (tomas@ebi.ac.uk)
 
 Enquires about potential collaboration:
 
-* Ewan Birney (birney@ebi.ac.uk)
+* Victoria L Keevil (vlk20@cam.ac.uk); Ewan Birney (birney@ebi.ac.uk)
